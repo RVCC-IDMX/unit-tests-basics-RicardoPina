@@ -34,7 +34,9 @@ TODO: Use the const keyword to declare a variable called c and assign it the sum
 */
 
 // * Add your code BELOW here
-
+const a = 34;
+const b = 43;
+const c = a + b;
 // * Don't mess with the test code below here!
 
 test('arithmetic sum', () => {
@@ -70,14 +72,13 @@ test('arithmetic sum', () => {
 
 ? Math.random() returns a random number between 0 (inclusive) and 1 (exclusive).
 
-
 TODO: This skill requires 1 line of code.
 TODO: Using the Math object, assign a random number to a variable called rnd.
 
 */
 
 // * Add your code BELOW here
-
+let rnd = Math.random();
 // * Don't mess with the test code below here!
 
 test('rnd', () => {
@@ -90,7 +91,6 @@ test('rnd', () => {
 
 ! SKILL 3 Create a random integer using the Math object 🍎
 
-
 ? REMEMBER: Math.random() returns a random floating-point number
 ? between 0 (inclusive) and 1 (exclusive).
 ? Math.floor() rounds a number down to the nearest integer.
@@ -98,7 +98,6 @@ test('rnd', () => {
 ? So, to create a random integer between 0 (inclusive) and 10 (exclusive),
 ? the expression is: Math.floor(Math.random() * 10)
 ? The result of that expression is an integer between 0 and 9.
-
 
 TODO: This skill requires 1 line of code.
 TODO: Using the Math object, assign a random integer to a variable called randomInt
@@ -110,7 +109,7 @@ TODO: Make sure to round down the value to the nearest integer.
 vi.spyOn(global.Math, 'random').mockReturnValue(0.9);
 
 // * Add your code BELOW here
-
+let randomInt = Math.floor(Math.random() * 5);
 // * Don't mess with the test code below here!
 
 vi.spyOn(global.Math, 'random').mockRestore();
@@ -138,7 +137,8 @@ TODO: assign the result to a variable called numRounded
 */
 
 // * Add your code BELOW here
-
+const num = 17.89;
+const numRounded = Math.floor(num);
 // * Don't mess with the test code below here!
 
 test('numRounded', () => {
@@ -170,7 +170,12 @@ TODO: In line 6: Using the Math object, round rounding3 to the nearest integer
 */
 
 // * Add your code BELOW here
-
+let rounding1 = 5.59;
+rounding1 = Math.round(rounding1);
+let rounding2 = 5.5;
+rounding2 = Math.round(rounding2);
+let rounding3 = 5.05;
+rounding3 = Math.round(rounding3);
 // * Don't mess with the test code below here!
 
 test('rounding', () => {
@@ -180,7 +185,7 @@ test('rounding', () => {
   expect(rounding2).toBe(6);
   expect(typeof rounding3).toBe('number');
   expect(rounding3).toBe(5);
-})
+});
 /*
 
 ! SKILL 6 Type conversion string to number using parseInt() 🍎
@@ -202,7 +207,8 @@ TODO: it the value of parseInt() applied to orderBagels
 */
 
 // * Add your code BELOW here
-
+let orderBagels = '13 is a Baker\'s Dozen';
+const bakersDozen = parseInt(orderBagels);
 // * Don't mess with the test code below here!
 
 test('bakersDozen', () => {
@@ -232,7 +238,6 @@ test('bakersDozen', () => {
 ?    n.toFixed(0)         // => "123457"
 ?    n.toFixed(2)         // => "123456.79"  (two decimal places)
 
-
 TODO: This skill requires 2 lines of code.
 TODO: Using the keyword const, declare a constant called myPi
 TODO: and assign it the value of 3.141592653589793
@@ -242,7 +247,8 @@ TODO: the value of myPi converted to a string with four decimal places
 */
 
 // * Add your code BELOW here
-
+const myPi = 3.141592653589793;
+const myPiFixed = myPi.toFixed(4);
 // * Don't mess with the test code below here!
 
 test('myPiFixed', () => {
@@ -277,7 +283,7 @@ TODO: using the unary + operator
 */
 
 // * Add your code BELOW here
-
+let sliceOfPi = +myPiFixed;
 // * Don't mess with the test code below here!
 
 test('sliceOfPi', () => {
